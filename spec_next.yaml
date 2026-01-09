@@ -559,7 +559,15 @@ paths:
               $ref: '#/components/schemas/service'
       responses:
         '200':
-          description: ''
+          description: Service created successfully (legacy compatibility)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/service'
+              example:
+                accessTokenDuration: 3600
+        '201':
+          description: Service created successfully
           content:
             application/json:
               schema:
@@ -1281,7 +1289,16 @@ paths:
                   value: attribute2-value
       responses:
         '200':
-          description: ''
+          description: Client created successfully (legacy compatibility)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/client'
+              example:
+                applicationType: WEB
+                clientId: 26478243745571
+        '201':
+          description: Client created successfully
           content:
             application/json:
               schema:
@@ -4895,6 +4912,8 @@ paths:
                     'y': j80Y3leZHHnxC_gN-Ols_l_VfEBQkfGDFFDG5LNJKMl
                     x: xAdEkaExYWGGAC1xYjwxzvqcaCyDloylZk04yiE9_OF
                     kid: ec256-enc-001
+        '204':
+          description: No JWK Set available for this service
         '400':
           $ref: '#/components/responses/400'
         '401':
