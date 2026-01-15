@@ -41,12 +41,13 @@ Scoped to a **single service** (authorization server instance).
 - Managing clients within a specific service
 
 **How to get one:**
-1. Log in to the [Authlete Console](https://console.authlete.com)
+1. Log in to the Authlete Console
 2. Navigate to your service
 3. Go to **Settings** → **Access Tokens**
 4. Click **Create Token**
-5. Select appropriate permissions (e.g., `service.read`, `client.write`)
-6. Copy the generated token
+5. Copy the generated token
+
+The token will have service-level permissions for the selected service.
 
 #### Organization Token
 Scoped to your **entire organization** with permissions across all services.
@@ -57,12 +58,11 @@ Scoped to your **entire organization** with permissions across all services.
 - Building control plane tooling
 
 **How to get one:**
-1. Log in to the [Authlete Console](https://console.authlete.com)
+1. Log in to the Authlete Console
 2. Navigate to **Organization Settings**
 3. Go to **Access Tokens**
 4. Click **Create Token**
-5. Select organization-level permissions
-6. Copy the generated token
+5. Copy the generated token
 
 ### Token Security
 
