@@ -342,7 +342,6 @@ Authlete is compliant with:
 - OpenID Connect Core 1.0
 - FAPI 1.0 and 2.0
 - UK Open Banking
-- GDPR, SOC 2 Type II
 
 ---
 
