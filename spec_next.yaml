@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Authlete API
   description: |
-    Welcome to the **Authlete API documentation**. Authlete is an **API-first service** where every aspect of the 
+    Testing CI auto MR 5. Welcome to the **Authlete API documentation**. Authlete is an **API-first service** where every aspect of the 
     platform is configurable via API. This documentation will help you authenticate and integrate with Authlete to 
     build powerful OAuth 2.0 and OpenID Connect servers.
 
@@ -558,16 +558,8 @@ paths:
             schema:
               $ref: '#/components/schemas/service'
       responses:
-        '200':
-          description: Service created successfully (legacy compatibility)
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/service'
-              example:
-                accessTokenDuration: 3600
         '201':
-          description: Service created successfully
+          description: ''
           content:
             application/json:
               schema:
@@ -1288,17 +1280,8 @@ paths:
                 - key: attribute2-key
                   value: attribute2-value
       responses:
-        '200':
-          description: Client created successfully (legacy compatibility)
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/client'
-              example:
-                applicationType: WEB
-                clientId: 26478243745571
         '201':
-          description: Client created successfully
+          description: ''
           content:
             application/json:
               schema:
@@ -5228,7 +5211,7 @@ paths:
                     x: xAdEkaExYWGGAC1xYjwxzvqcaCyDloylZk04yiE9_OF
                     kid: ec256-enc-001
         '204':
-          description: No JWK Set available for this service
+          description: No content
         '400':
           $ref: '#/components/responses/400'
         '401':
@@ -17044,6 +17027,7 @@ components:
       type: object
       required:
         - grantType
+        - clientId
       properties:
         grantType:
           $ref: '#/components/schemas/grant_type'
@@ -17369,6 +17353,8 @@ components:
           $ref: '#/components/schemas/token_batch_status'
     token_update_request:
       type: object
+      required:
+        - accessToken
       properties:
         accessToken:
           type: string
